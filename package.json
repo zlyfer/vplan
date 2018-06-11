@@ -1,0 +1,27 @@
+{
+  "name": "vplan",
+  "version": "1.0.0",
+  "description": "Vertretungsplan für die BBS2 Emden auf Electron-Basis.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlyfer/vplan.git"
+  },
+  "keywords": [
+    "Vertretungsplan",
+    "BBS2",
+    "Emden"
+  ],
+  "author": "Frederik 'zlyfer' Shull",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zlyfer/vplan/issues"
+  },
+  "homepage": "https://github.com/zlyfer/vplan#readme",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}
