@@ -1,60 +1,60 @@
 :root {
-  --bg_main: #F5F5F5;
-  --bg_primary: #E0E0E0;
-  --bg_secondary: #BDBDBD;
-  --accent: #E91E63;
-  --dark_accent: #C2185B;
-  --dark_accent2: #AD1457;
-  --light_accent: #F06292;
+	--bg_main: #F5F5F5;
+	--bg_primary: #E0E0E0;
+	--bg_secondary: #BDBDBD;
+	--accent: #E91E63;
+	--dark_accent: #C2185B;
+	--dark_accent2: #AD1457;
+	--light_accent: #F06292;
 }
 
 input[type=text] {
-  height: 25px;
-  appearance: none;
-  text-align: center;
-  outline: none;
-  position: absolute;
-  color: var(--dark_accent);
-  border: 1px solid var(--accent);
-  background-color: var(--bg_main);
+	height: 25px;
+	appearance: none;
+	text-align: center;
+	outline: none;
+	position: absolute;
+	color: var(--dark_accent);
+	border: 1px solid var(--accent);
+	background-color: var(--bg_main);
 }
 
 input[type=text]::placeholder {
-  color: var(--light_accent);
+	color: var(--light_accent);
 }
 
 input[type=button] {
-  height: 29px;
-  appearance: none;
-  text-align: center;
-  outline: none;
-  position: absolute;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  background-color: var(--bg_primary);
+	height: 29px;
+	appearance: none;
+	text-align: center;
+	outline: none;
+	position: absolute;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+	background-color: var(--bg_primary);
 }
 
 input[type=button]:hover {
-  cursor: pointer;
-  color: var(--bg_main);
-  border: 1px solid var(--accent);
-  background-color: var(--accent);
+	cursor: pointer;
+	color: var(--bg_main);
+	border: 1px solid var(--accent);
+	background-color: var(--accent);
 }
 
 input[type=button]:active {
-  color: var(--bg_main);
-  border: 1px solid var(--dark_accent2);
-  background-color: var(--dark_accent2);
+	color: var(--bg_main);
+	border: 1px solid var(--dark_accent2);
+	background-color: var(--dark_accent2);
 }
 
 input#kurs {
-  width: 130px;
-  top: 100px;
-  left: 50px;
+	width: 130px;
+	top: 100px;
+	left: 50px;
 }
 
 input#suchen {
-  width: 100px;
-  top: 100px;
-  left: 185px;
+	width: 100px;
+	top: 100px;
+	left: 185px;
 }
