@@ -1,11 +1,15 @@
 const url = 'https://vplan.zlyfer.net/api/api.php?interface=false';
 
-async function api(kurs = "", db = '&vshistory=false') {
-	if (kurs) {
-		kurs = `&Kurs=${kurs}`;
+async function api(history, params) {
+	if (history) {
+		db = '&vsnormal=false';
+	} else {
+		db = '&vshistory=false';
 	}
-	console.log(url + db + kurs);
-	let data = await fetch(url + db + kurs);
+	if (params) {} else {
+		params = "";
+	}
+	let data = await fetch(url + db + params);
 	let json = await data.json();
 	return json;
 }

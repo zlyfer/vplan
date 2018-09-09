@@ -20,3 +20,13 @@ function index_init() {
 		remote.getCurrentWindow().close();
 	});
 }
+
+function loading_animation() {
+	let la = document.getElementById('loading_animation');
+	let state = la.style.display;
+	if (state == "block") {
+		la.style.display = "none";
+	} else {
+		la.style.display = "block";
+	}
+}

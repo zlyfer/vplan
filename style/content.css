@@ -1,60 +1,152 @@
-:root {
-	--bg_main: #F5F5F5;
-	--bg_primary: #E0E0E0;
-	--bg_secondary: #BDBDBD;
-	--accent: #E91E63;
-	--dark_accent: #C2185B;
-	--dark_accent2: #AD1457;
-	--light_accent: #F06292;
-}
+/* Kurspanel */
 
-input[type=text] {
-	height: 25px;
-	appearance: none;
-	text-align: center;
-	outline: none;
+input#searchkurs, input#searchanything {
+	height: 40px;
+	width: calc(100% - (2 * 1%));
+	top: calc(5px + 28px);
+	left: 1%;
 	position: absolute;
-	color: var(--dark_accent);
-	border: 1px solid var(--accent);
-	background-color: var(--bg_main);
 }
 
-input[type=text]::placeholder {
-	color: var(--light_accent);
+input#searchanything {
+	display: none;
+	width: calc(100% - (2 * 1%) - 10%);
+	display: none;
 }
 
-input[type=button] {
-	height: 29px;
-	appearance: none;
-	text-align: center;
-	outline: none;
+input#backtokurspanel {
+	width: calc(10% + 2px);
 	position: absolute;
-	color: var(--accent);
-	border: 1px solid var(--accent);
-	background-color: var(--bg_primary);
+	top: calc(5px + 28px);
+	left: calc(100% - (2 * 1%) - 9% + 1px);
+	height: 44px;
+	display: none;
 }
 
-input[type=button]:hover {
-	cursor: pointer;
-	color: var(--bg_main);
+div#kurspanel, div#vertretungspanel {
+	position: absolute;
+	left: calc(1%);
+	top: calc(55px + 28px);
+	width: calc(100% - (1% - 10px - (2 * 1px)) - 3px);
+	width: calc(98% + 2px);
+	height: calc(100% - 55px - 28px);
+	overflow-y: auto;
+	padding-right: 0;
+}
+
+div.kurspanel_entry, div.vertretungspanel_entry {
+	width: calc(((100% - ((8 * 10px) + (10 * 1px))) / 5));
+	height: 200px;
 	border: 1px solid var(--accent);
+	background-color: var(--light_accent4);
+	float: left;
+	overflow-y: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.vertretungspanel_entry {
+	padding-top: 1%;
+	padding-bottom: 1%;
+	overflow-y: auto;
+	height: 205px;
+}
+
+div.kurspanel_entry:not(.last), div.vertretungspanel_entry:not(.last) {
+	margin-right: 10px;
+}
+
+div.kurspanel_entry.last, div.vertretungspanel_entry.last {
+	margin-right: 0px;
+}
+
+div.kurspanel_entry:not(.first), div.vertretungspanel_entry:not(.first) {
+	margin-left: 10px;
+}
+
+div.kurspanel_entry.first, div.vertretungspanel_entry.first {
+	margin-left: 0px;
+}
+
+div.kurspanel_entry:hover, div.vertretungspanel_entry:hover {
 	background-color: var(--accent);
 }
 
-input[type=button]:active {
+div.kurspanel_entry:hover span.kurspanel_entry_kurs {
 	color: var(--bg_main);
-	border: 1px solid var(--dark_accent2);
-	background-color: var(--dark_accent2);
+	font-size: 32px;
+	margin-top: calc(5%);
 }
 
-input#kurs {
-	width: 130px;
-	top: 100px;
-	left: 50px;
+div.kurspanel_entry:hover span.kurspanel_entry_days {
+	background-color: var(--bg_main);
 }
 
-input#suchen {
-	width: 100px;
-	top: 100px;
-	left: 185px;
+span.kurspanel_entry, span.vertretungspanel_entry {
+	color: var(--accent);
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+span.kurspanel_entry {
+	white-space: nowrap;
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+span.vertretungspanel_entry {
+	width: calc(96% / 2);
+	float: left;
+	font-size: 100%;
+	margin-bottom: 5px;
+}
+
+span.vertretungspanel_entry.key {
+	text-align: left;
+	padding-left: 2%;
+}
+
+span.vertretungspanel_entry.value {
+	text-align: right;
+	padding-right: 2%;
+}
+
+span.kurspanel_entry {
+	user-select: none;
+}
+
+span.kurspanel_entry_kurs {
+	font-size: 24px;
+	transition: font-size 0.1s 0s ease-out, margin-top 0.1s 0s ease-out;
+	margin-top: calc(5%);
+}
+
+span.kurspanel_entry_days {
+	width: calc(50%);
+	font-size: 17px;
+	line-height: 25px;
+	float: left;
+}
+
+span.kurspanel_entry_days.single {
+	width: calc(100%);
+}
+
+span.kurspanel_entry_days:hover {
+	cursor: pointer;
+	color: var(--bg_main);
+	background-color: var(--dark_accent) !important;
+}
+
+div#vertretungspanel {
+	display: none;
+}
+
+span.vertretungspanel_entry {}
+
+div.vertretungspanel_entry:hover span.vertretungspanel_entry {
+	color: var(--bg_main);
 }

@@ -6,10 +6,81 @@
 	--dark_accent: #C2185B;
 	--dark_accent2: #AD1457;
 	--light_accent: #F06292;
+	--light_accent2: #F48FB1;
+	--light_accent3: #F8BBD0;
+	--light_accent4: #FCE4EC;
+}
+
+#kurspanel::-webkit-scrollbar, #vertretungspanel::-webkit-scrollbar {
+	width: 10px;
+}
+
+#kurspanel::-webkit-scrollbar-thumb, #vertretungspanel::-webkit-scrollbar-thumb {
+	background-color: var(--accent);
+	border-left: 5px solid var(--bg_main);
+}
+
+#kurspanel::-webkit-scrollbar-track, #vertretungspanel::-webkit-scrollbar-track {
+	background-color: var(--bg_main);
+}
+
+div.kurspanel_entry::-webkit-scrollbar, div.vertretungspanel_entry::-webkit-scrollbar {
+	width: 4px;
+}
+
+div.kurspanel_entry::-webkit-scrollbar-thumb, div.vertretungspanel_entry::-webkit-scrollbar-thumb {
+	background-color: var(--accent);
+}
+
+div.kurspanel_entry::-webkit-scrollbar-track, div.vertretungspanel_entry::-webkit-scrollbar-track {
+	background-color: var(--light_accent4);
+	border: none;
 }
 
 body {
 	background-color: var(--bg_main);
+}
+
+input[type=text] {
+	appearance: none;
+	text-align: center;
+	outline: none;
+	position: absolute;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+	background-color: var(--bg_main);
+}
+
+input[type=text]:hover, input[type=text]:active, input[type=text]:focus {
+	color: var(--dark_accent);
+	background-color: var(--light_accent4);
+}
+
+input[type=text]::placeholder {
+	color: var(--light_accent);
+}
+
+input[type=button] {
+	appearance: none;
+	text-align: center;
+	outline: none;
+	position: absolute;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+	background-color: var(--bg_primary);
+}
+
+input[type=button]:hover {
+	cursor: pointer;
+	color: var(--bg_main);
+	border: 1px solid var(--accent);
+	background-color: var(--accent);
+}
+
+input[type=button]:active {
+	color: var(--bg_main);
+	border: 1px solid var(--dark_accent2);
+	background-color: var(--dark_accent2);
 }
 
 div.titlebar {
@@ -41,14 +112,14 @@ div.titlebar_button:active {
 }
 
 div#logo {
-	background-image: url("../images/logo_square.png");
+	background-image: url("../images/logo.png");
 	background-repeat: no-repeat;
-	background-size: 28px;
-	height: 28px;
-	width: 28px;
+	background-size: 24px;
+	height: 24px;
+	width: 24px;
 	position: absolute;
-	left: 0px;
-	top: 0px;
+	left: 2px;
+	top: 2px;
 }
 
 div#close {
@@ -75,6 +146,7 @@ div#loading_animation {
 	width: 0px;
 	height: 0px;
 	animation: drop 0.8s linear infinite;
+	display: none;
 }
 
 @keyframes drop {
